@@ -8,6 +8,7 @@ import About from './components/Pages/About/About';
 import Appointment from './components/Pages/Appointment/Appointment';
 import Login from './components/Pages/Login/Login/Login';
 import AuthProvider from './context/AuthProvider';
+import PrivateRoute from './components/Pages/Login/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -25,9 +26,9 @@ function App() {
           <About></About>
           
         </Route>
-        <Route path="/appointment/:imgID">
+        <PrivateRoute path="/appointment/:imgID">
             <Appointment></Appointment>
-          </Route>
+          </PrivateRoute>
         <Route path="/login">
             <Login></Login>
           </Route>
